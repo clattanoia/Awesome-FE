@@ -1,5 +1,5 @@
 import Quill from 'quill'
-import { ImageDrop } from 'quill-image-drop-module'
+import { ImageDrop } from './plugins/imageDrop/ImageDrop'
 import { ImageResize } from './plugins/imageResize/ImageResize'
 
 // 图片相关
