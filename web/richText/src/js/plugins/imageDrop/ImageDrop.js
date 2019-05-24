@@ -47,7 +47,6 @@ export class ImageDrop {
    * @param {Event} evt
    */
   handlePaste(evt) {
-    console.log('evt:', evt.clipboardData, evt.clipboardData.items)
     if (
       evt.clipboardData &&
       evt.clipboardData.items &&
@@ -55,18 +54,6 @@ export class ImageDrop {
     ) {
       this.readFiles(evt.clipboardData.items, dataUrl => {
         const selection = this.quill.getSelection()
-        console.log('selection:', selection)
-
-        if (selection) {
-          if (selection.length == 0) {
-            console.log('User cursor is at index', selection.index)
-          } else {
-            var text = quill.getText(selection.index, selection.length)
-            console.log('User has highlighted: ', text)
-          }
-        } else {
-          console.log('User cursor is not in editor')
-        }
 
         if (selection) {
           // we must be in a browser that supports pasting (like Firefox)

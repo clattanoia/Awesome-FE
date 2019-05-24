@@ -23,7 +23,7 @@ var fonts = [
   'sans-serif'
 ]
 var Font = Quill.import('formats/font')
-console.log(Font)
+
 Font.whitelist = fonts // 将字体加入到白名单
 Quill.register(Font, true)
 
