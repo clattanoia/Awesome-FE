@@ -6,7 +6,7 @@ import { Resize } from './modules/Resize'
 
 const knownModules = { DisplaySize, Toolbar, Resize }
 
-export class ImageResize {
+export default class ImageResize {
   constructor(quill, options = {}) {
     // save the quill reference and options
     this.quill = quill
@@ -115,6 +115,7 @@ export class ImageResize {
     // listen for the image being deleted or moved
     document.addEventListener('keyup', this.checkImage, true)
     this.quill.root.addEventListener('input', this.checkImage, true)
+    this.quill.getModule('toolbar').container.querySelector('.ql-align').addEventListener('click', this.hide, false)
 
     // Create and add the overlay
     this.overlay = document.createElement('div')
@@ -137,6 +138,7 @@ export class ImageResize {
     // stop listening for image deletion or movement
     document.removeEventListener('keyup', this.checkImage)
     this.quill.root.removeEventListener('input', this.checkImage)
+    this.quill.getModule('toolbar').container.querySelector('.ql-align').removeEventListener('click', this.hide)
 
     // reset user-select
     this.setUserSelect('')

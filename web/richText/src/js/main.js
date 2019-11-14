@@ -1,10 +1,6 @@
 import Quill from 'quill'
-import { ImageDrop } from './plugins/imageDrop/ImageDrop'
-import { ImageResize } from './plugins/imageResize/ImageResize'
 
-// 图片相关
-Quill.register('modules/imageDrop', ImageDrop)
-Quill.register('modules/imageResize', ImageResize)
+import './modules'
 
 // 自定义字体大小
 let Size = Quill.import('attributors/style/size')
@@ -43,14 +39,19 @@ const toolbarOptions = {
 
 const quill = new Quill('#editor', {
   theme: 'snow',
+  bounds: '#editor',
+  scrollingContainer: 'body',
   placeholder: '支持常规编辑器功能，图片粘贴、拖动上传、缩放、模拟图库功能',
   scrollingContainer: '#container',
 
   modules: {
-    toolbar: '#toolbar-container',
+    toolbar: {
+      container: '#toolbar-container',  // Selector for toolbar container
+    },
     imageDrop: true,
     imageResize: {}
-  }
+  },
+
 })
 
 quill.on('editor-change', function(eventName, ...args) {
@@ -60,3 +61,26 @@ quill.on('editor-change', function(eventName, ...args) {
     // args[0] 将是就得范围
   }
 })
+
+quill.clipboard.addMatcher(Node.ELEMENT_NODE, (node, delta) => {
+  let ops = []
+  delta.ops.forEach(op => {
+    if (
+      op.insert &&
+      (typeof op.insert === 'string' ||
+        (typeof op.insert === 'object' && op.insert.image))
+    ) {
+      ops.push({
+        insert: op.insert
+      })
+    }
+  })
+  delta.ops = ops
+  return delta
+})
+
+// 或许可以解决点击图片滚动到顶部问题
+// $('.quill-toolbar').on("click", function(event){
+//   event.preventDefault();
+//   event.stopPropagation();
+// })
