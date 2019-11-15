@@ -2,10 +2,13 @@ import Quill from 'quill'
 
 import Blockquote, { BlockquoteItem } from './blockquote'
 import Divider from './divider'
+import Undo from './undo'
+import Redo from './redo'
 
 Quill.register({ 'formats/blockquote': Blockquote }, true)
 Quill.register({ 'formats/BlockquoteItem': BlockquoteItem })
 Quill.register({ 'formats/divider': Divider })
+Quill.register({ 'formats/redo': Redo, 'formats/undo': Undo })
 
 
 const Icons = Quill.import('ui/icons')

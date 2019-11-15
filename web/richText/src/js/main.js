@@ -51,7 +51,8 @@ const quill = new Quill('#editor', {
     },
     imageDrop: true,
     imageResize: {},
-    divider: true
+    divider: true,
+    undoRedo: true
   },
 
 })
