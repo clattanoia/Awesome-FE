@@ -1,5 +1,6 @@
 import Quill from 'quill'
 
+import './formats'
 import './modules'
 
 // 自定义字体大小
@@ -78,9 +79,3 @@ quill.clipboard.addMatcher(Node.ELEMENT_NODE, (node, delta) => {
   delta.ops = ops
   return delta
 })
-
-// 或许可以解决点击图片滚动到顶部问题
-// $('.quill-toolbar').on("click", function(event){
-//   event.preventDefault();
-//   event.stopPropagation();
-// })
