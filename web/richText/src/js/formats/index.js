@@ -4,14 +4,21 @@ import Blockquote, { BlockquoteItem } from './blockquote'
 import Divider from './divider'
 import Undo from './undo'
 import Redo from './redo'
+import FontStyle from './font'
+
+const Icons = Quill.import('ui/icons')
+const AlignStyle = Quill.import('attributors/style/align')
+const Size = Quill.import('attributors/style/size')
+
+Size.whitelist = ['10px', '12px', '14px', '16px', '18px', '20px']
 
 Quill.register({ 'formats/blockquote': Blockquote }, true)
 Quill.register({ 'formats/BlockquoteItem': BlockquoteItem })
 Quill.register({ 'formats/divider': Divider })
 Quill.register({ 'formats/redo': Redo, 'formats/undo': Undo })
-
-
-const Icons = Quill.import('ui/icons')
+Quill.register({ 'formats/font': FontStyle }, true)
+Quill.register(AlignStyle, true)
+Quill.register(Size, true)
 
 // 设置工具栏按钮图标
 Icons.divider = '<span class="iconfont icon-editor-dividing">'
