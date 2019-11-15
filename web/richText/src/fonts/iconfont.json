@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2746379",
+      "name": "背景颜色",
+      "font_class": "font-bgcolor",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "5297053",
+      "name": "indent-increase",
+      "font_class": "indent-increase",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "5317151",
+      "name": "indent-decrease",
+      "font_class": "indent-decrease",
+      "unicode": "e76a",
+      "unicode_decimal": 59242
+    },
+    {
+      "icon_id": "8452193",
+      "name": "删除线",
+      "font_class": "shanchuxian",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
       "icon_id": "8872712",
       "name": "normal",
       "font_class": "image",
@@ -137,6 +165,20 @@
       "font_class": "editor-redo",
       "unicode": "e605",
       "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "9358769",
+      "name": "video",
+      "font_class": "video",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10793700",
+      "name": "字体颜色_文字操作_jurassic",
+      "font_class": "jurassic_font-color",
+      "unicode": "e704",
+      "unicode_decimal": 59140
     }
   ]
 }
