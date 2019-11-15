@@ -50,7 +50,8 @@ const quill = new Quill('#editor', {
       container: '#toolbar-container',  // Selector for toolbar container
     },
     imageDrop: true,
-    imageResize: {}
+    imageResize: {},
+    divider: true
   },
 
 })
