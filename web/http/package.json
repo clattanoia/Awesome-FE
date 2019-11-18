@@ -1,5 +1,5 @@
 {
-  "name": "http-axios",
+  "name": "axios-client",
   "version": "1.0.0",
   "description": "build axios for http",
   "main": "index.js",
