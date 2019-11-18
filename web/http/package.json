@@ -1,0 +1,52 @@
+{
+  "name": "http-axios",
+  "version": "1.0.0",
+  "description": "build axios for http",
+  "main": "index.js",
+  "author": "clattanoia <yacnlee@outlook.com>",
+  "license": "MIT",
+  "engine": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "babel -x .js test/src/ -d test/lib && ava",
+    "build": "babel src -d lib",
+    "example": "cd example && npm start",
+    "prepush": "npm test",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clattanoia/Awesome-FE.git"
+  },
+  "keywords": [
+    "request",
+    "axios",
+    "fetch",
+    "ajax",
+    "declarative",
+    "decorators",
+    "controller",
+    "RESTful",
+    "HttpClient"
+  ],
+  "dependencies": {
+    "query-string": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.2.3",
+    "ava": "^1.1.0",
+    "axios": "^0.18.0",
+    "babel-plugin-parameter-decorator": "^1.0.7",
+    "sinon": "^7.3.2"
+  },
+  "ava": {
+    "files": [
+      "./test/*.js"
+    ]
+  }
+}
