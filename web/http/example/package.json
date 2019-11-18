@@ -1,5 +1,5 @@
 {
-  "name": "http-client-example",
+  "name": "axios-client-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server"
   },
-  "author": "Warner Hooh <warner.hooh@gmail.com>",
+  "author": "clattanoia <yacnlee@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "http-clienti": "^1.0.0",
     "request": "^2.88.0",
     "whatwg-fetch": "^3.0.0"
