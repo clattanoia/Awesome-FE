@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "webpack --config ./build/webpack.config.js --watch"
   },
-  "keywords": [],
+  "keywords": ["quill", "rich text"],
   "author": "clattanoia",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clattanoia/Awesome-FE.git"
+  },
   "dependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
