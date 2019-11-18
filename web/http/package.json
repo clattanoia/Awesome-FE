@@ -27,8 +27,7 @@
     "declarative",
     "decorators",
     "controller",
-    "RESTful",
-    "HttpClient"
+    "RESTful"
   ],
   "dependencies": {
     "query-string": "^5.1.1"
